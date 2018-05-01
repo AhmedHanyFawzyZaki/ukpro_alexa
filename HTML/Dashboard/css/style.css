@@ -1,0 +1,1703 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+position: relative;
+background: #fff;
+color: #404c5a;
+
+line-height: 1.25;
+font-weight: 300;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-body {
+
+}
+header {
+background: #735e68;
+display: block;
+min-height: 60px;
+line-height: 35px;
+}
+a, button {
+	color: #553445;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #e75854;
+}
+.logo {
+font-weight: normal;
+font-size: 1.2em;
+padding: 0.75em 0 0.75em 1.75em;
+margin: 0;
+text-transform: uppercase;
+color: #fff;
+text-shadow: none;
+font-family: monospace;
+z-index: 1;
+position: relative;
+}
+.logo:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.codrops-header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.codrops-header h1 {
+	margin: 0;
+	font-weight: 800;
+	font-size: 3em;
+	
+}
+
+.codrops-header p {
+	padding: 0.35em 0 1.25em;
+	margin: 0;
+	font-size: 1.65em;
+	opacity: 0.7;
+}
+
+/* Codrops Demos */
+.codrops-demos a {
+	
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.codrops-demos a.current-demo {
+	color: #e75854;
+}
+
+/* Top Navigation Style */
+.codrops-top {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.69em;
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	display: inline-block;
+	padding: 0 1em;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	display: block;
+	float: left;
+}
+
+.codrops-icon:before {
+	margin: 0 4px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+.section {
+	padding: 2em;
+	text-align: justify;
+	max-width: 96%;
+	margin: 0 auto;
+	clear: both;
+}
+
+.section p {
+	font-size: 1.5em;
+	line-height: 1.75;
+}
+
+
+
+
+/* Demo mockups */
+
+html.demo-7, .demo-7 body {
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.demo-7 .main-body {
+	width: 100%;
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+	transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+}
+
+.no-js.demo-7 .main-body {
+	width: calc(100% - 300px);
+	right: 0;
+}
+
+.pushed.main-body {
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transform: translateX(300px);
+	transform: translateX(300px);
+}
+
+/* Morph Button: Default Styles */
+
+.morph-button {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.morph-button > button {
+	position: relative;
+	padding: 0 1em;
+	border: none;
+	background-color: #e2463a;
+	color: #f9f6e5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	line-height: 80px;
+	overflow: hidden;
+}
+
+.morph-button.open > button {
+	pointer-events: none;
+}
+
+.morph-content {
+	pointer-events: none;
+}
+
+.morph-button.open .morph-content {
+	pointer-events: auto;
+}
+
+/* Common styles for overlay and modal type (fixed morph) */
+.morph-button-fixed,
+.morph-button-fixed .morph-content {
+	width: 300px;
+	height: 80px;
+}
+
+.morph-button-fixed > button {
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity 0.1s 0.5s;
+	transition: opacity 0.1s 0.5s;
+}
+
+.morph-button-fixed.open > button {
+	opacity: 0;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+.morph-button-fixed .morph-content {
+	position: fixed;
+	z-index: 900;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content {
+	opacity: 1;
+}
+
+.morph-button-fixed .morph-content > div {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+	transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content > div {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s 0.5s;
+	transition: opacity 0.3s 0.5s;
+}
+
+.morph-button-fixed.active > button {
+	z-index: 2000;
+}
+
+.morph-button-fixed.active .morph-content {
+	z-index: 1900;
+}
+
+/* Transitions for overlay button and sidebar button */
+.morph-button-overlay .morph-content,
+.morph-button-sidebar .morph-content {
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+}
+
+.morph-button-overlay.open .morph-content,
+.morph-button-sidebar.open .morph-content {
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;	
+}
+
+/* Morph Button Style: Overlay */
+.morph-button.morph-button-overlay {
+	margin: 50px auto;
+}
+
+.morph-button-overlay .morph-content {
+	overflow: hidden;
+	background: #e85657;
+}
+
+.morph-button-overlay.open .morph-content {
+	top: 0 !important;
+	left: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+
+/* Morph Button Style: Modal */
+.morph-button-modal::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	pointer-events: none;
+}
+
+.morph-button-modal.open::before {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.morph-button-modal.active::before {
+	z-index: 1800;
+}
+
+.morph-button-modal .morph-content {
+	overflow: hidden;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-modal.open .morph-content {
+	top: 50% !important;
+	left: 50% !important;
+	margin: -210px 0 0 -300px;
+	width: 600px;
+	height: 420px;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+/* Colors and sizes for individual modals */
+.morph-button.morph-button-modal-1 {
+	float: left;
+}
+
+.morph-button.morph-button-modal-2,
+.morph-button.morph-button-modal-3 {
+	display: inline-block;
+	margin: 10px 15px;
+}
+
+.morph-button-modal-1 > button,
+.morph-button-modal-1 .morph-content {
+	background-color: #553445;
+}
+
+.morph-button-modal-2 > button,
+.morph-button-modal-2 .morph-content,
+.morph-button-modal-3 > button,
+.morph-button-modal-3 .morph-content {
+	background-color: #fef0e3;
+	color: #e75854;
+}
+
+.morph-button-modal-4 {
+	display: inline-block;
+}
+
+.morph-button-modal-4 > button,
+.morph-button-modal-4 .morph-content {
+	background-color: #faf1e0;
+	color: #553445;
+}
+
+.morph-button-modal-4 > button span,
+.morph-button-modal-4 .morph-clone {
+	padding-left: 10px;
+	color: #286f81;
+}
+
+.morph-button-modal-4 .morph-clone {
+	position: absolute;
+	right: 34px;
+	bottom: 30px;
+	z-index: 100;
+	letter-spacing: 1px;
+	font-weight: 700;
+	-webkit-transition: bottom 0.4s 0.1s, right 0.4s 0.1s;
+	transition: bottom 0.4s 0.1s, right 0.4s 0.1s;
+}
+
+.morph-button-modal-4.open .morph-clone,
+.no-js .morph-button-modal-4 .morph-clone {
+	right: 10px;
+	bottom: 10px;
+}
+
+.morph-button-modal-1::before {
+	background: rgba(240,221,204,0.7);
+}
+
+.morph-button-modal-2.open .morph-content {
+	margin: -210px 0 0 -170px;
+	width: 340px;
+	height: 420px;
+}
+
+.morph-button-modal-3.open .morph-content {
+	margin: -255px 0 0 -210px;
+	width: 420px;
+	height: 510px;
+}
+
+.morph-button-modal-3.open .morph-content > div {
+	height: 420px;
+}
+
+.morph-button-modal-2.open .morph-content > div,
+.morph-button-modal-3.open .morph-content > div {
+ 	-webkit-transition: opacity 0.3s 0.3s;
+	transition: opacity 0.3s 0.3s;
+}
+
+.morph-button-modal-4.open .morph-content {
+	margin: -200px 0 0 -320px;
+	width: 640px;
+	height: 400px;
+}
+
+/* Morph Button Style: In the content flow */
+.morph-button-inflow {
+	overflow: hidden;
+	max-width: 100%;
+	height: 70px;
+}
+
+.morph-button-inflow > button {
+	width: 100%;
+	line-height: 70px;
+}
+
+.morph-button-inflow .morph-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.morph-button-inflow .morph-content .morph-clone {
+	padding: 0;
+	font-weight: 700;
+	font-size: 1.5em;
+	line-height: 70px;
+}
+
+/* Colors and sizes for individual in flow buttons */
+.morph-button-inflow-1 {
+	width: 600px;
+	margin: 2em auto;
+	-webkit-transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+	transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+}
+
+.morph-button-inflow-1 > button span {
+	visibility: hidden;
+}
+
+.morph-button-inflow-1 .morph-content .morph-clone {
+	color: #f9f6e5;
+	background: #e85657;
+}
+
+.morph-button-inflow-2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 220px;
+	background-color: #fef0e3;
+	-webkit-transition: height 0.3s, width 0.3s, -webkit-transform 0.3s;
+	transition: height 0.3s, width 0.3s, transform 0.3s;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.morph-button-inflow-2 > button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	color: #e75854;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.morph-button-inflow-2.open > button {
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.morph-button-inflow-2 .morph-content {
+	width: 260px;
+	height: 200px;
+}
+
+.morph-button-inflow-2.open {
+	width: 260px;
+}
+
+/* Morph Button Style: Sidebar */
+.morph-button-sidebar,
+.morph-button-sidebar .morph-content {
+	width: 60px;
+	height: 60px;
+}
+
+.morph-button-sidebar {
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+}
+
+.morph-button-sidebar > button {
+	line-height: 60px;
+	font-size: 1.6em;
+	padding: 0;
+}
+
+.morph-button-sidebar .morph-content {
+	background: #e2463a;
+}
+
+.morph-button-sidebar.open .morph-content {
+	top: 0 !important;
+	left: 0 !important;
+	width: 300px;
+	height: 100%;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Let's add some nice easing for all cases */
+.morph-button .morph-content,
+.morph-button.open .morph-content,
+.morph-button-modal-4 .morph-clone {
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+/* Helper classes */
+.noscroll {
+	overflow: hidden;
+}
+
+.morph-button-overlay.scroll .morph-content {
+	overflow-y: scroll;
+}
+
+.morph-button-sidebar.scroll .morph-content {
+	overflow: auto;
+}
+
+/* No JS fallback: let's hide the button and show the content */
+.no-js .morph-button > button {
+	display: none;
+}
+
+.no-js .morph-button {
+	margin: 10px 0;
+	float: none;
+}
+
+.no-js .morph-button,
+.no-js .morph-button .morph-content,
+.no-js .morph-button .morph-content > div {
+	position: relative;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+	top: auto;
+	left: auto;
+	-webkit-transform: none;
+	transform: none;
+	pointer-events: auto;
+}
+
+.no-js .morph-button .morph-content .icon-close {
+	display: none;
+}
+
+.no-js .morph-button-sidebar {
+	width: 300px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	height: 100%;
+	background: #e85657;
+	overflow: auto;
+}
+
+.no-transition {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+
+
+
+/*content file*/
+
+.content-style-social a {
+	display: block;
+	padding: 0.5em 0;
+	color: #67c2d4;
+	vertical-align: middle;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 0.8em;
+	line-height: 32px;
+}
+
+.js .content-style-social a {
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.content-style-social a:hover {
+	color: #e75854;
+}
+
+.content-style-social a:hover svg path {
+	fill: #e75854;
+}
+
+.content-style-social a svg {
+	display: inline-block;
+	padding-right: 10px;
+	vertical-align: middle;
+	-webkit-backface-visibility: hidden;
+}
+
+.morph-button-inflow.open .content-style-social a {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);	
+}
+
+.morph-button-inflow.open .content-style-social a:nth-child(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.morph-button-inflow.open .content-style-social a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.content-style-video {
+	text-align: left;
+}
+
+.video-mockup {
+	width: 640px;
+	height: 360px;
+	max-width: 100%;
+	background: url(../img/rated.png) no-repeat center center;
+	background-size: 100%;
+}
+
+.content-style-video .icon-close,
+.content-style-video .icon-pause {
+	color: #286f81;
+}
+
+.content-style-video .icon-close {
+	top: 0;
+	right: 0;
+}
+
+.content-style-video .icon-close:hover {
+	color: rgba(0,0,0,0.4);
+}
+
+.controls {
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.js .controls {
+	position: absolute;
+}
+
+.controls span {
+	display: inline-block;
+}
+
+.content-style-video .icon-pause {
+	overflow: hidden;
+	width: 2.5em;
+	height: 2.5em;
+	text-align: center;
+	line-height: 2.5;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+
+.content-style-video span.time {
+	color: #286f81;
+	letter-spacing: 1px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+.controls::after {
+	content: '';
+	position: absolute;
+	height: 7px;
+	left: 100px;
+	right: 70px;
+	bottom: 16px;
+	background: #aaa;
+}
+
+.content-style-sidebar h2 {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 0.75em 0 0.75em 1em;
+	margin: 0;
+	color: #A01314;
+}
+
+.content-style-sidebar .icon-close {
+	top: 5px;
+	right: 5px;
+	font-size: 0.85em;
+	position:absolute;
+	cursor:pointer;
+}
+
+.content-style-sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.content-style-sidebar ul li a {
+	display: block;
+	padding: 12px 20px;
+	color: #faf1e0;
+	font-weight: 400;
+	font-size: 1.05em;
+	box-shadow: inset 0 1px rgba(0,0,0,0.1);
+}
+.main-menu li a .fa{
+float:left;
+margin-right:10px;	
+}
+
+
+.content-style-sidebar ul li:last-child a {
+	box-shadow: inset 0 1px rgba(0,0,0,0.1), inset 0 -1px rgba(0,0,0,0.1);
+}
+
+.content-style-sidebar ul li a:hover {
+	background:#d23429;
+	box-shadow: none;
+	text-decoration:none;
+}
+
+.content-style-sidebar ul .icon::before {
+	display: inline-block;
+	width: auto;
+	margin-right: 20px;
+	font-size: 1.5em;
+	vertical-align: -10%;
+	color: rgba(0,0,0,0.2);
+}
+
+header .nav-pills > li > a{
+padding: 0 22px;
+line-height: 60px;
+color: rgba(255, 255, 255, .8);
+border-radius:0px;
+-webkit-border-radius:0;	
+}
+header .nav-pills > li {
+margin-left: 0px;
+border-left: 1px solid #E9E9E9;
+}
+header .nav-pills > li > a > i{
+font-size:18px;
+color: rgba(255, 255, 255, .8);
+}
+header .nav-pills > li > a:hover > i{
+font-size:18px;
+color: rgba(255, 255, 255, 1);	
+}
+header .nav .open > a, header .nav .open > a:hover, header .nav .open > a:focus{
+		text-decoration: none;
+background-color:#45505d;
+border-radius:0px;
+-webkit-box-shadow:inset 0 -1px 10px 0 rgba(0,0,0,.2);
+box-shadow:inset 0 -1px 10px 0 rgba(0,0,0,.2);
+color: rgba(255, 255, 255, 1);
+}
+header .nav > li > a:hover, header .nav > li > a:focus, header .nav > li > a:active{
+	text-decoration: none;
+background-color:#45505d;
+border-radius:0px;
+-webkit-box-shadow:inset 0 -1px 10px 0 rgba(0,0,0,.2);
+box-shadow:inset 0 -1px 10px 0 rgba(0,0,0,.2);
+color: rgba(255, 255, 255, 1);
+}
+.dropdown-menu{
+border-radius:0;
+-webkit-border-radius:0;	
+}
+header .nav > li > a > .label{
+position: absolute;
+top: 30px;
+right: 9px;
+font-size: 9px;
+}
+.sub{
+display:none;
+height:0px;	
+}
+.sub > li > a{
+	padding: 5px 45px !important;
+background: #92221a;
+}
+.main-menu li:hover > .sub{
+	display:block;
+    height:auto;
+}
+
+.h-menu{
+position: absolute;
+top: -47px;
+right: 30px;
+color: #fff;
+z-index: 1000;
+padding: 0 10px;	
+}
+.panel-primary {
+border-color: #576474;
+}
+.panel-primary > .panel-heading {
+color: #fff;
+background-color: #576474;
+border-color: #576474;
+}
+.panel-warning {
+border-color: #E99A66;
+}
+.panel-warning > .panel-heading {
+color: #9c5627;
+background-color: #ffc39c;
+border-color: #E99A66;
+}
+.panel-danger {
+border-color: #FFA29B;
+}
+.panel-danger > .panel-heading {
+color: #e2463a;
+background-color: #f6c7c4;
+border-color: #FFA29B;
+}
+
+.call-board
+{
+	background:#576474;
+	position:relative;
+	margin-top:30px;
+
+}
+
+.call-board .panel-heading {
+  background: none repeat scroll 0 0 #f24541;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: -26px;
+  width: 96%;
+}
+
+.modal-backdrop.in
+{
+	opacity:0.9;
+}
+
+.screen-numb
+{
+	background:#fff;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	margin-top:40px;
+	padding:20px;
+}
+
+.screen-numb p
+{
+	color:#000;
+	font-size:22px;
+	text-align:center;
+	width:100%;
+	float:left;
+}
+
+.screen-numb .timer
+{
+	float:left;
+	text-align:center;
+	width:100%;
+	font-weight:bold;
+	color:#333;
+	font-size:22px;
+	
+}
+
+.add-new
+{
+	text-align:center;
+}
+
+.add-new .btn {
+  background: none repeat scroll 0 0 #9eddca;
+  border: 1px solid #52aa93;
+  box-shadow: none;
+  color: #333;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 0;
+  width:145px;
+}
+
+.add-new .btn:hover , .add-new .btn:focus
+{
+	background:#52aa93;
+	color:#fff;
+	
+	
+}
+
+.contacts-btn
+{
+	text-align:center;
+}
+
+.contacts-btn .btn {
+  background: none repeat scroll 0 0 #47a447;
+  border: 1px solid #398439;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
+  width: 145px;
+}
+
+.contacts-btn .btn:hover , .contacts-btn .btn:focus
+{
+	
+	background:#2da41a
+}
+
+.contacts-btn i
+{
+	font-size:16px;
+	margin-right:5px;
+}
+
+.control-btns
+{
+	background:#ccc;
+	padding:10px;
+
+}
+.modal-dialog {
+width: 600px;
+margin: 100px auto;
+}
+.control-btns .btn {
+  width: 125px;
+  margin: 0px 14px;
+}
+
+.control-btns .btn:hover, .control-btns .btn:focus
+{
+	opacity:0.8;
+}
+
+.btn-success
+{
+	background:#47a447;
+	border:1px solid #398439;
+}
+
+.btn-info
+{
+	background:#39b3d7;
+	border:1px solid #269abc;
+}
+
+.btn-warning
+{
+	background:#ed9c28;
+	border:1px solid #d58512;
+}
+
+.btn-primary
+{
+	background:#3276b1;
+	border:1px solid #285e8e;
+}
+
+.btn-danger
+{
+	background:#d2322d;
+	border:1px solid #ac2925;
+}
+
+.calls {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+  z-index: 100000;
+  position:fixed;
+  top:0;
+  bottom:0;
+}
+
+.call-modal
+{
+	z-index:100000000;
+}
+
+
+.heading {
+  background: none repeat scroll 0 0 #fbfbfb;
+  border-bottom: 1px solid #d4d4d4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.067);
+  margin: -28px -40px 0;
+  padding:5px;
+  margin-bottom:20px;
+}
+
+.heading .icons {
+  color: #f34541;
+  display: block;
+  float: left;
+  font-size: 20px;
+  padding: 10px 5px 10px 10px;
+}
+
+.heading h5 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 10px 0 10px 5px;
+}
+
+.table thead th
+{
+	background:#576474;
+	color:#fff;
+	font-weight:normal;
+	border-left:1px solid #ccc;
+	
+}
+
+.table > thead > tr > th
+{
+	border:1px solid #ddd;
+	
+}
+
+.table
+{
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+.table td
+{
+	color:#333;
+	background:#fff;
+}
+
+.table td a i
+{
+	margin-right:5px;
+	color:#553445;
+}
+
+.table td a
+{
+	color:#08c;
+}
+
+.views .btn
+{
+	background:#f34541;
+	color:#fff;
+	border:1px solid #f34541;
+
+}
+
+.views .btn:hover , table .btn:focus
+{
+	opacity:0.8;
+	color:#fff;
+}
+
+.views .btn
+{
+	margin-bottom:20px;
+}
+
+.form-horizontal .control-label
+{
+	text-align:left;
+	text-transform:capitalize;
+	font-weight:normal;
+	color:#333;
+	font-size:15px;
+}
+.form1 .btn
+{
+	float:right;
+	
+	margin-left:10px;
+}
+.form1 .btn-default
+{
+	float:right;
+	background:#735e68;
+	border:1px solid #735e68;
+	color:#fff;
+	margin-left:10px;
+}
+
+.inner {
+  background:none repeat scroll 0 0 rgba(187, 169, 181, 0.45);
+  border-radius: 7px;
+  padding: 30px 10px;
+  margin-bottom:20px;
+  min-height:500px;
+}
+
+.right-label
+{
+	text-align:center !important;
+}
+
+.new-btn
+{
+	background:#f34541 !important;
+	color:#fff !important;
+	border:1px solid #f34541 !important;
+}
+
+.add-case
+{
+	background:#576474;
+	padding:10px;
+	margin-top:30px;
+	margin-bottom:15px;
+	border-radius:5px;
+}
+
+.add-case .control-label
+{
+	color:#fff;
+}
+
+
+.staff-info .dl-horizontal dt
+{
+	text-align:left;
+	line-height:30px;
+	width:180px;
+}
+
+.staff-info .dl-horizontal dd
+{
+	line-height:30px;
+}
+
+.out-calls .btn
+{
+	background:#9eddca;
+	color:#333;
+	font-size:13px;
+}
+
+.out-calls .btn:hover , .out-calls .btn:focus
+{
+	background:#52aa93;
+	color:#fff;
+}
+
+
+.out-calls i
+{
+	font-size:22px;
+	color:#090 !important;
+}
+
+.member-table td a i
+{
+	color:#090 !important;
+}
+
+.member-table td a .comment-icon
+{
+	color:#553445 !important;
+}
+
+.screen2
+{
+	height:240px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	border-radius:0 !important;
+}
+
+.top-menu .dropdown .chat > li > a
+{
+	padding:0 6px !important;
+}
+
+.top-menu .dropdown .chat > li > a .img-circle {
+  border: 1px solid #dddddd;
+  margin: auto 10px auto auto;
+  width:100%;
+  
+}
+
+.top-menu .dropdown .chat li
+{
+	border-bottom:1px solid #f4f4f4;
+	float:left;
+}
+
+.user-img
+{
+	padding:2px 0 0 !important;
+}
+
+.user-name
+{
+	line-height:30px;
+}
+
+.top-menu .chat
+{
+	min-width:238px;
+	height:200px;
+	overflow-x:auto;
+	overflow-y:scroll;
+}
+
+.online
+{
+	color:#090;
+	font-size:9px;
+	line-height:30px;
+}
+
+.off
+{
+	color:#090;
+	font-size:9px;
+	line-height:30px;
+}
+
+.dial-icon
+{
+	font-size:20px !important;
+}
+
+.keypad
+{
+	margin-top:45px;
+	margin-bottom:45px;
+}
+
+.keypad p{
+	color: #fff;
+font-size: 18px;
+text-align: center;
+margin: 0 0px 20px;
+}
+
+.keypad .error{
+		color: #fff;
+font-size: 12px;
+text-align: left;
+line-height: 12px;
+margin: 10px 0 0;
+}
+.keypad .btn
+{
+	width:83px;
+	border:0;
+	box-shadow:none;
+	background:#ebebeb;
+	font-size:22px;
+	color:#333;
+	float:left;
+	margin:5px;
+	padding:3px;
+}
+
+.keypad .btn:hover
+{
+	background:#d4d0d0;
+}
+
+.dials-btn
+{
+	padding:0 !important;
+}
+
+.dials-btn .btn
+{
+	height:40px;
+}
+
+.dials-btn i
+{
+	font-size:24px;
+}
+
+.loginpanelinner {
+  background: none repeat scroll 0 0 #fbfbfb;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px -2px #cccccc;
+  margin-bottom: 20px;
+}
+
+.login-head {
+  background:#576474;
+  border-bottom: 1px solid #cdcdcd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #fff;
+}
+
+.login-head span {
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.login-box {
+  padding: 20px;
+}
+
+.loginpanel {
+  margin: 40px auto 0;
+  width: 440px;
+}
+
+.login-box i
+{
+	font-size:24px;
+	color:#553445;
+}
+
+.login-box .form-control
+{
+	height:38px;
+}
+
+.login-box .btn
+{
+	width:100%;
+	background:#f34541;
+	color:#fff;
+	border:1px solid #da332f;
+	font-size:16px;
+}
+
+.login-box .btn:hover , .login-box .btn:focus
+{
+	opacity:0.8;
+}
+
+.login
+{
+	margin-top:40px;
+}
+
+.modal-header
+{
+	background:#576474;
+	color:#fff;
+}
+
+.close
+{
+	color:#fff;
+	opacity:0.9;
+}
+
+.close:hover
+{
+	color:#fff;
+}
+
+.rating i
+{
+	color:#FC3;
+	font-size:22px;
+	line-height:30px;
+}
+
+.modal-btn
+{
+	float:right !important;
+}
+
+.profile-img img{
+	width:100%;
+	margin-bottom:20px;
+}
+.timer{
+	font-size: 40px;
+text-align: center;
+width: 100%;
+float: left;
+background: none repeat scroll 0 0 #f24541;
+color: #fff;
+padding: 10px;
+line-height: 60px;
+margin-top: 50px;
+}
+.time-control .btn{
+width:49%;
+margin-top:20px;	
+}
+.nav-tabs {
+border-bottom: 1px solid #576474;
+}
+.nav-tabs > li > a{
+background: #576474;
+color: #fff;
+}
+.nav-tabs > li > a:hover{
+	background: #2F353D;
+	border-color:#2F353D;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background-color: #e2463a;
+	color:#fff;
+	border-color:#e2463a;
+}
+
+.comment{
+background: #ccc;
+margin-top: 2px;	
+}
+.comment .profile-img a{
+padding: 10px;
+float: left;
+width: 100%;
+}	
+
+.comment .comment-body{
+	padding-top: 10px;
+	padding-bottom:10px;
+
+}
+.comment .createby{
+float:left;
+width:50%;
+color:#08c;
+}
+.comment .attachements{
+	float:left;
+width:100%;
+color:#08c;
+}
+.comment .attachements a{
+	float:left;
+margin-right: 20px;
+color:#08c;
+}
+.add-attchements{
+margin-top:10px;	
+}
+.add-attchements .control-label{
+line-height:33px;	
+}
+
+.dropdown-menu > li > a {
+padding: 3px 10px;
+}
+.dropdown-menu > li > a > .fa {
+margin-right:5px;
+}
+.autoserf{
+width: 100%;
+padding: 35px;
+background:#e2463a;
+margin-bottom: 20px;
+}
+.autoserf span{
+font-size: 18px;
+font-family: monospace;
+width: 145px;
+display: block;
+white-space: normal;
+text-align: left;
+float: left;	
+text-transform: uppercase;
+}
+.autoserf .fa{
+float: left;
+font-size: 50px;
+}
+.radio-inline, .checkbox-inline{
+padding-top:0 !important;	
+}
+.tools{
+text-align:center;	
+}
+.tools h1{
+margin-bottom: 35px;	
+}
+.tools h4{
+margin-bottom: 30px;	
+}
+
+.alexa-link{
+font-size: 18px;
+text-transform: uppercase;
+font-weight: normal;
+padding: 30px 25px;
+background: #e47f00 !important;
+border: 0 !important;
+border-bottom: 2px solid #b06200 !important;
+margin-top: 50px;
+}
+.mini-title{
+margin: 0 0 35px 0;	
+}
+
+.nav-pills.nav-stacked > li > a{
+background: #735e68;
+color: #fff;
+margin-bottom: 6px;
+}
+.nav-pills.nav-stacked > li.active > a, .nav-pills.nav-stacked > li.active > a:hover, .nav-pills.nav-stacked > li.active > a:focus{
+background:#f34541;	
+}
+.nav-pills.nav-stacked > li > a:hover, .nav-pills.nav-stacked > li > a:focus{
+background:#f34541;	
+}
+.pricing-plan {
+position: relative;
+display: inline-block;
+vertical-align: top;
+width: 100%;
+padding:0 15px;
+margin: 0;
+text-align: center;
+background: #FFF;
+border: 1px solid #DDD;
+-webkit-border-radius: 4px;
+-webkit-background-clip: padding-box;
+-moz-border-radius: 4px;
+-moz-background-clip: padding;
+border-radius: 4px;
+background-clip: padding-box;
+}
+.pricing-plan .pricing-title {
+margin-bottom: 0;
+font-size: 21px;
+font-weight: 600;
+text-transform: uppercase;
+}
+.pricing-plan .btn{
+	margin-top:20px;
+}
+/* Media Queries */
+@media screen and (min-width: 991px) {
+	#top-menu{
+	height:auto;
+	display: block;	
+	}
+}
+@media screen and (max-width: 770px) {
+	.section {
+	max-width: 100%;
+padding: 2em .5em;
+}
+	.top-menu{
+border-top: 1px solid #fff;
+}
+	.mockup-left {
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.mockup-right {
+		text-align: center;
+	}
+
+	.joiner {
+		display: block;
+	}
+		.content-style-overlay {
+		font-size: 75%;
+	}
+
+	.content-style-overlay .icon-close {
+		top: 5px;
+		right: 5px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.morph-button-modal.open .morph-content {
+		top: 0% !important;
+		left: 0% !important;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+		transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.morph-button-sidebar,
+	.morph-button-sidebar .morph-content {
+		width: 100% !important;
+	
+	}
+
+	.morph-button-sidebar {
+		bottom: 0px;
+		left: 0px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.mockup-content > span:nth-last-child(2) {
+		width: calc(100% - 210px);
+	}
+	.morph-button-fixed,
+	.morph-button-fixed .morph-content {
+		width: 200px;
+		height: 80px;
+	}
+
+	.morph-button-fixed > button {
+		font-size: 75%;
+	}
+
+	.morph-button-inflow .morph-content .morph-clone {
+		font-size: 0.9em;
+	}
+
+	.morph-button-modal-4,
+	.morph-button-modal-4 .morph-content {
+		width: 220px;
+		height: 120px;
+	}
+
+	.morph-button-modal-4 > button {
+		font-size: 100%;
+		line-height: 50px;
+	}
+
+	.morph-button-modal-4 > button span {
+		display: block;
+	}
+
+	.morph-button-modal-4 .morph-clone {
+		right: 83px;
+		bottom: 26px;
+	}
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

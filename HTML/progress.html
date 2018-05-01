@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<style>
+.content {
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+    float: right;
+    min-height: 150px;
+    width: 100%;
+  margin-top:20px;
+}
+
+.content p {
+	margin-top:5px;
+}
+
+footer {
+	float:left;
+   border-radius: 10px;
+   width: 100%;
+	margin-top:20px;
+    background-color: #dadada;
+}
+
+.ui-progress-bar {
+  position: relative;
+  height: 35px;
+  padding-right: 2px;
+  background-color: #DADADA;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.ui-progress {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 33px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-size: 44px 44px;
+  background-color: #74d04c;
+  border: 1px solid #4c8932;
+  -webkit-animation: animate-stripes 2s linear infinite;
+}
+
+.ui-progress span.ui-label {
+  font-size: 1.2em;
+  position: absolute;
+  right: 0;
+  line-height: 33px;
+  padding-right: 12px;
+  color: rgba(0,0,0,0.6);
+  text-shadow: rgba(255,255,255, 0.45) 0 1px 0px;
+  white-space: nowrap;
+}
+
+.content_success {
+    display: none;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://www.jose-aguilar.com/scripts/jquery/progress-bar/js/progress.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Hide the label at start
+    $('#progress_bar .ui-progress .ui-label').hide();
+    // Set initial value
+    $('#progress_bar .ui-progress').css('width', '0%');
+
+    // Simulate some progress
+    $('#progress_bar .ui-progress').animateProgress(33,
+  function() {
+        $(this).animateProgress(66, function() {
+            setTimeout(function() {
+                $('#progress_bar .ui-progress').animateProgress(100, function() {
+                  $('.content_success').slideDown();
+                });
+            }, 1000);
+        });
+    });
+});
+</script>
+
+<section class="content">
+<!-- Progress bar -->
+<div id="progress_bar" class="ui-progress-bar">
+  <div class="ui-progress" style="width: 79%;">
+    <span class="ui-label" style="display:none;">Procesando <b class="value">79%</b></span>
+  </div>
+</div>
+<!-- /Progress bar -->
+        <div class="content_success">
+            <h2>Progress bar success</h2>
+            <p>Las barras de progreso son elementos de las interfaces gráficas  que permiten mostrar de forma gráfica el estado de avance de una tarea o proceso. Generalmente el gráfico está acompañado de información en forma de texto para medir con exactitud el avance. Por ejemplo, con estas barras puede verse el progreso en la descarga o transferencia de un archivo, el porcentaje de renderizado de un modelo 3D, el avance en la carga de un juego, etc.</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
